@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cvs",
+  "info": {
+    "name": "cv",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "date"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "resume": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "languages": {
+      "collection": "language",
+      "via": "candidates"
+    },
+    "schools": {
+      "collection": "school",
+      "via": "candidate"
+    },
+    "skills": {
+      "collection": "skill",
+      "via": "candidates"
+    },
+    "works": {
+      "collection": "work",
+      "via": "candidate"
+    },
+    "about": {
+      "type": "text"
+    },
+    "experience": {
+      "type": "text"
+    },
+    "plus": {
+      "type": "text"
+    },
+    "curriculum": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "cv"
+    },
+    "name": {
+      "type": "string",
+      "default": "Resume"
+    },
+    "user": {
+      "type": "biginteger"
+    },
+    "document": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

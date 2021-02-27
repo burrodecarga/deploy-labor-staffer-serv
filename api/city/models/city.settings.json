@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cities",
+  "info": {
+    "name": "city",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "city": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "city"
+    }
+  }
+}

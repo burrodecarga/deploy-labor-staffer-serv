@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "privados",
+  "info": {
+    "name": "privado"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    }
+  }
+}

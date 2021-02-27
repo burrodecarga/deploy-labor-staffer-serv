@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "languages",
+  "info": {
+    "name": "language",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "candidates": {
+      "via": "languages",
+      "collection": "cv",
+      "dominant": true
+    },
+    "users": {
+      "via": "languages",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "candidates",
+  "info": {
+    "name": "Candidate",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "password": {
+      "type": "password"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "resume": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "languages": {
+      "collection": "language",
+      "via": "candidates"
+    },
+    "schools": {
+      "collection": "school",
+      "via": "candidate"
+    },
+    "skills": {
+      "collection": "skill",
+      "via": "candidates"
+    },
+    "works": {
+      "collection": "work",
+      "via": "candidate"
+    },
+    "about": {
+      "type": "text"
+    },
+    "experience": {
+      "type": "text"
+    },
+    "plus": {
+      "type": "text"
+    }
+  }
+}

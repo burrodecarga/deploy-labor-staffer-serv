@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schools",
+  "info": {
+    "name": "school",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "school": {
+      "type": "string"
+    },
+    "candidate": {
+      "via": "schools",
+      "model": "cv"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "specialties",
+  "info": {
+    "name": "specialty"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "specialty": {
+      "type": "string",
+      "required": true
+    },
+    "requirement": {
+      "via": "specialties",
+      "model": "requirement"
+    }
+  }
+}

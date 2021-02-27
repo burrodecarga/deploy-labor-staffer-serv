@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "name": "profile",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "owner": {
+    "model": "user"
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "date"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "resume": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+
+    "languages": {
+      "collection": "language",
+      "via": "candidates"
+    },
+    "schools": {
+      "collection": "school",
+      "via": "candidate"
+    },
+    "skills": {
+      "collection": "skill",
+      "via": "candidates"
+    },
+    "works": {
+      "collection": "work",
+      "via": "candidate"
+    },
+    "about": {
+      "type": "text"
+    },
+    "experience": {
+      "type": "text"
+    },
+    "plus": {
+      "type": "text"
+    }
+  }
+}

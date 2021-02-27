@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "post",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "responsibilities": {
+      "type": "richtext"
+    },
+    "qualifications": {
+      "type": "richtext"
+    },
+    "max_salary": {
+      "type": "float"
+    },
+    "min_salary": {
+      "type": "float"
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    },
+    "schedule": {
+      "model": "schedule"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "private": false,
+      "required": false
+    },
+    "state": {
+      "model": "state"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "City": {
+      "type": "string"
+    },
+    "category": {
+      "model": "category"
+    },
+    "aspirantes": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "posts"
+    },
+    "users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "posts"
+    }
+  }
+}
