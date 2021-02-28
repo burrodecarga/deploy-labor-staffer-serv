@@ -112,3 +112,10 @@ exports
 *.cache
 build
 .strapi-updater.json
+
+
+_cacache
+_data
+_libvips
+_looks
+_prebuilds
