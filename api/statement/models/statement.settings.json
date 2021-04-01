@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "statements",
+  "info": {
+    "name": "statement"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user": {
+      "type": "integer"
+    },
+    "job": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "name": {
+      "type": "string"
+    },
+    "offer": {
+      "type": "string"
+    }
+  }
+}
